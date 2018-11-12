@@ -8,8 +8,7 @@
 #NO NEEDS TO DEPLOY STUFF ABOVE
 # Copying data from GIT
 git clone https://github.com/Artemmkin/reddit.git
-# Install dependences
-source ~/.rvm/scripts/rvm
+# Install dependen
 cd reddit && bundle install
 #Starting Server
 puma -d
