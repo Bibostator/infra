@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 #installing Ruby
 #chmod u+x ~/install_ruby.sh
 #~/install_ruby.sh
