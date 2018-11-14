@@ -13,11 +13,11 @@
    "provisioners": [
     {
     "type": "shell",
-    "script": "../install_ruby.sh"
+    "script": "./install_ruby.sh"
     },
     {
         "type": "shell",
-        "script": "../install_mongodb.sh",
+        "script": "./install_mongodb.sh",
         "execute_command": "sudo {{.Path}}"
      }
   ]
