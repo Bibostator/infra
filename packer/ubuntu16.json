@@ -1,0 +1,29 @@
+{  
+    "variables": {
+        "pject_id": null,
+        "s_image": null,
+        "m_type":"f1-micro"
+      },
+    "builders": [
+    {
+    "type": "googlecompute",
+    "project_id": "{{user `pject_id`}}",
+    "image_name": "reddit-base-{{timestamp}}",
+    "source_image": "{{user `s_image`}}",
+    "zone": "europe-west1-b",
+    "ssh_username": "bibmaster",
+    "machine_type": "{{user `m_type`}}"
+    }
+   ],
+   "provisioners": [
+    {
+    "type": "shell",
+    "script": "./install_ruby.sh"
+    },
+    {
+        "type": "shell",
+        "script": "./install_mongodb.sh",
+        "execute_command": "sudo {{.Path}}"
+     }
+  ]
+}
